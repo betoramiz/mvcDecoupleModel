@@ -1,0 +1,24 @@
+﻿@model DataModel.Employee
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add Employee</h2>
+
+@using(Html.BeginForm())
+{
+    <label>First Name:</label>
+    @Html.TextBoxFor(model => model.firstName)
+    <br />
+    <label>Last Name:</label>
+    @Html.TextBoxFor(model => model.lastName)
+    <br />
+    <label>Birth Date:</label>
+    @Html.TextBoxFor(model => model.birthDate)
+    <br />
+    <label>Phone:</label>
+    @Html.TextBoxFor(model => model.phone)
+
+    <input type="submit" name="submitEmployee" value="Add" />
+}

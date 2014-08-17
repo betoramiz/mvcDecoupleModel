@@ -1,0 +1,10 @@
+﻿<div ng-app="appEmp">
+    <div ng-controller="controllerEmp">
+        <div ng-repeat="employee in employees">
+            <h3>{{employee.firstName + " " + employee.lastName}}</h3><br />
+            <label>{{employee.phone}}</label><br />
+            <label>{{employee.birthDate}}</label>
+        </div>
+        
+    </div>
+</div>

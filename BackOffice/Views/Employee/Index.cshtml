@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DataModel.Employee>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Employee List</h2>
+
+@Html.ActionLink("Add New", "Add")
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Bith Date</td>
+        <td>Phone Number</td>
+        <td></td>
+        <td></td>
+    </tr>
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.id</td>
+            <td>@emp.firstName  @emp.lastName</td>
+            <td>@emp.birthDate</td>
+            <td>@emp.phone</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { id = emp.id})</td>
+            <td>@Html.ActionLink("Modify", "Modify", new { id = emp.id})</td>
+        </tr>
+    }
+</table>

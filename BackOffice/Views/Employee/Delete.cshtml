@@ -1,0 +1,24 @@
+﻿@model DataModel.Employee
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+@using(Html.BeginForm())
+{
+    <label>First Name:</label>
+    @Html.LabelFor(model => model.firstName)
+    <br />
+    <label>Last Name:</label>
+    @Html.LabelFor(model => model.lastName)
+    <br />
+    <label>Birth Date:</label>
+    @Html.LabelFor(model => model.birthDate)
+    <br />
+    <label>Phone:</label>
+    @Html.LabelFor(model => model.phone)
+    <br />
+
+    <input type="submit" name="delete" value="Delete" />
+}
